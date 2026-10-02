@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- PylonIQ prototype: Detail page for a NFL team roster-->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PylonIQ - Arizona Cardinals</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header id="site-header">
+    <a id="logo" href="dashboard.html">PylonIQ</a>
+    <nav>
+      <ul id="primary-nav">
+        <li><a href="dashboard.html">Home</a></li>
+        <li><a href="list.html">My Rosters</a></li>
+        <li><a href="add.html">Create Roster</a></li>
+      </ul>
+    </nav>
+    <p id="user-menu">
+      <span class="avatar">MT</span>
+      <a href="index.html">Log Out</a>
+    </p>
+    <form id="search-form" action="search.html" method="get">
+      <label for="search-box">Search players</label>
+      <input type="text" id="search-box" name="q" placeholder="Try &quot;Jacoby&quot;" />
+      <input type="submit" value="Search" />
+    </form><!--simulated search box that uses GET method-->
+  </header><!--nav bar and header-->
+
+  <main id="main-content">
+    <p class="back-link"><a href="list.html">&larr; Back to My Rosters</a></p>
+
+    <div class="page-heading">
+      <h1>Arizona Cardinals</h1>
+      <p class="badge">NFL Team</p>
+    </div>
+
+    <div class="roster-actions">
+      <details class="confirm-delete">
+        <summary>Delete Roster</summary>
+        <div class="confirm-box">
+          <p>Delete the Arizona Cardinals roster? This can't be undone, but you can follow the team again later.</p>
+          <p><a class="button" href="list.html">Yes, Delete This Roster</a></p>
+          <p class="note">To cancel, select Delete Roster again.</p>
+        </div>
+      </details>
+    </div><!--Delete buttons-->
+
+    <section class="roster-overview">
+      <!-- Image came from Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Larry_Fitzgerald_catches_TD_at_2009_Pro_Bowl.jpg -->
+      <img class="overview-image" src="images/FitzCatch.jpg" alt="Larry Fitzgerald making an impressive touchdown catch in the pro bowl" />
+      <h2>Season Summary</h2>
+      <dl class="roster-summary">
+        <dt>Season record</dt>
+        <dd>1-1</dd>
+        <dt>Last game</dt>
+        <dd>L 31-7 vs. Seattle Seahawks (Week 2)</dd>
+        <dt>Next game</dt>
+        <dd>San Francisco 49ers (Week 3)</dd>
+      </dl>
+    </section><!--Team overview-->
+
+    <section class="roster-players">
+      <h2>Key Players</h2>
+      <p class="note">Week 2 Pts = fantasy points scored in Week 2 (PPR). Season Pts = total fantasy points so far. Tip: click a player's row to see why he got his trade signal. Click again to close the explanation.Double-click a player's name to add your own note about him.</p>
+      <table class="stats-table">
+        <thead>
+          <tr>
+            <th scope="col">Player</th>
+            <th scope="col">Pos</th>
+            <th scope="col" class="number">Week 2 Pts</th>
+            <th scope="col" class="number">Season Pts</th>
+            <th scope="col" class="number"><abbr title="Expected Points Added">EPA</abbr> per Play</th>
+            <th scope="col">Signal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Trey McBride</th>
+            <td>TE</td>
+            <td class="number">17.9</td>
+            <td class="number">39.6</td>
+            <td class="number">0.24</td>
+            <td><span class="badge">Hold</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Michael Wilson</th>
+            <td>WR</td>
+            <td class="number">15.3</td>
+            <td class="number">27.8</td>
+            <td class="number">0.19</td>
+            <td><span class="badge">Hold</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Jeremiyah Love</th>
+            <td>RB</td>
+            <td class="number">13.2</td>
+            <td class="number">30.1</td>
+            <td class="number">-0.04</td>
+            <td><span class="badge">Sell High</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Jacoby Brissett</th>
+            <td>QB</td>
+            <td class="number">9.6</td>
+            <td class="number">26.2</td>
+            <td class="number">-0.02</td>
+            <td><span class="badge">Hold</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Tyler Allgeier</th>
+            <td>RB</td>
+            <td class="number">5.2</td>
+            <td class="number">11.0</td>
+            <td class="number">0.08</td>
+            <td><span class="badge">Hold</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section><!--Player List-->
+  </main>
+
+  <footer id="site-footer">
+    <p>&copy; 2026 PylonIQ. Player stats in this prototype are not official, if you make decisions based on them, you are wrong.</p>
+  </footer>
+  <!-- install the jQuery library and my script that uses it -->
+  <script src="jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

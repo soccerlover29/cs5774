@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- PylonIQ prototype: Detail page for a Fantasy roster-->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PylonIQ - Family League</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header id="site-header">
+    <a id="logo" href="dashboard.html">PylonIQ</a>
+    <nav>
+      <ul id="primary-nav">
+        <li><a href="dashboard.html">Home</a></li>
+        <li><a href="list.html">My Rosters</a></li>
+        <li><a href="add.html">Create Roster</a></li>
+      </ul>
+    </nav>
+    <p id="user-menu">
+      <span class="avatar">MT</span>
+      <a href="index.html">Log Out</a>
+    </p>
+    <form id="search-form" action="search.html" method="get">
+      <label for="search-box">Search players</label>
+      <input type="text" id="search-box" name="q" placeholder="Try &quot;Jacoby&quot;" />
+      <input type="submit" value="Search" />
+    </form><!--simulated search box that uses GET method-->
+  </header><!--nav bar and header-->
+
+  <main id="main-content">
+    <p class="back-link"><a href="list.html">&larr; Back to My Rosters</a></p>
+
+    <div class="page-heading">
+      <h1>Family League</h1>
+      <p class="badge">Fantasy</p>
+    </div>
+    <p class="subtitle">Team name: Harrisonburg Tongenators</p>
+
+    <div class="roster-actions">
+      <p><a class="button button-secondary" href="add.html">Edit Roster</a></p>
+      <details class="confirm-delete">
+        <summary>Delete Roster</summary>
+        <div class="confirm-box">
+          <p>Are you sure you want to delete the Family League roster? This can't be undone.</p>
+          <p><a class="button" href="list.html">Yes, Delete This Roster</a></p>
+          <p class="note">To cancel, click the original Delete Roster button again.</p>
+        </div>
+      </details>
+    </div> <!--Edit and Delete buttons-->
+
+    <section class="roster-overview">
+      <h2>Season Summary</h2>
+      <dl class="roster-summary">
+        <dt>Season record</dt>
+        <dd>2-0</dd>
+        <dt>Last game</dt>
+        <dd>W 118.42-74.32 vs. Puppy Paws (Week 2)</dd>
+        <dt>Next game</dt>
+        <dd>Old Man Tongen (Week 3)</dd>
+      </dl>
+    </section><!--Team overview-->
+
+    <section class="roster-players">
+      <h2>Player Stats</h2>
+      <p class="note">Week 2 Pts = fantasy points scored in Week 2 (PPR). Season Pts = total fantasy points so far. Tip: click a player's row to see why he got his trade signal. Click again to close the explanation. Double-click a player's name to add your own note about him.</p>
+      <table class="stats-table">
+        <thead>
+          <tr>
+            <th scope="col">Player</th>
+            <th scope="col">Pos</th>
+            <th scope="col" class="number">Week 2 Pts</th>
+            <th scope="col" class="number">Season Pts</th>
+            <th scope="col" class="number"><abbr title="Expected Points Added">EPA</abbr> per Play</th>
+            <th scope="col">Signal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Josh Allen</th>
+            <td>QB</td>
+            <td class="number">35.8</td>
+            <td class="number">55.8</td>
+            <td class="number">0.30</td>
+            <td><span class="badge">Hold</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Ja'Marr Chase</th>
+            <td>WR</td>
+            <td class="number">26.5</td>
+            <td class="number">29.7</td>
+            <td class="number">0.24</td>
+            <td><span class="badge">Hold</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Christian McCaffrey</th>
+            <td>RB</td>
+            <td class="number">26.4</td>
+            <td class="number">41.8</td>
+            <td class="number">0.05</td>
+            <td><span class="badge">Sell High</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Trey McBride</th>
+            <td>TE</td>
+            <td class="number">17.9</td>
+            <td class="number">39.6</td>
+            <td class="number">0.24</td>
+            <td><span class="badge">Hold</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Derrick Henry</th>
+            <td>RB</td>
+            <td class="number">9.4</td>
+            <td class="number">37.2</td>
+            <td class="number">0.29</td>
+            <td><span class="badge">Buy Low</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section><!--Player List-->
+  </main>
+
+  <footer id="site-footer">
+    <p>&copy; 2026 PylonIQ. Player stats in this prototype are not official, if you make decisions based on them, you are wrong.</p>
+  </footer>
+  <!-- install the jQuery library and my script that uses it -->
+  <script src="jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

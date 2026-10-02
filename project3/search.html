@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- PylonIQ prototype: List page-->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PylonIQ - Search Results</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header id="site-header">
+    <a id="logo" href="dashboard.html">PylonIQ</a>
+    <nav>
+      <ul id="primary-nav">
+        <li><a href="dashboard.html">Home</a></li>
+        <li><a href="list.html">My Rosters</a></li>
+        <li><a href="add.html">Create Roster</a></li>
+      </ul>
+    </nav>
+    <p id="user-menu">
+      <span class="avatar">MT</span>
+      <a href="index.html">Log Out</a>
+    </p>
+    <form id="search-form" action="search.html" method="get">
+      <label for="search-box">Search players</label>
+      <input type="text" id="search-box" name="q" placeholder="Try &quot;Jacoby&quot;" />
+      <input type="submit" value="Search" />
+    </form><!--simulated search box that uses GET method-->
+  </header><!--nav bar and header-->
+
+  <main id="main-content">
+    <h1>Search Results</h1>
+      <!-- script.js reads the search phrase from the URL, changes this sentence, and adds the results -->
+      <p id="search-summary">JavaScript isn't turned on, so search is not available.</p>
+      <div id="search-results"></div>
+  </main>
+
+  <footer id="site-footer">
+    <p>&copy; 2026 PylonIQ. Player stats in this prototype are not official, if you make decisions based on them, you are wrong.</p>
+  </footer>
+  <!-- install the jQuery library and my script that uses it -->
+  <script src="jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

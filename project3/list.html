@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- PylonIQ prototype: List page-->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PylonIQ - My Rosters</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header id="site-header">
+    <a id="logo" href="dashboard.html">PylonIQ</a>
+    <nav>
+      <ul id="primary-nav">
+        <li><a href="dashboard.html">Home</a></li>
+        <li><a href="list.html" aria-current="page" class="selected">My Rosters</a></li>
+        <li><a href="add.html">Create Roster</a></li>
+      </ul>
+    </nav>
+    <p id="user-menu">
+      <span class="avatar">MT</span>
+      <a href="index.html">Log Out</a>
+    </p>
+    <form id="search-form" action="search.html" method="get">
+      <label for="search-box">Search players</label>
+      <input type="text" id="search-box" name="q" placeholder="Try &quot;Jacoby&quot;" />
+      <input type="submit" value="Search" />
+    </form><!--simulated search box that uses GET method-->
+  </header><!--nav bar and header-->
+
+  <main id="main-content">
+    <div class="page-heading">
+      <h1>My Rosters</h1>
+      <p><a class="button" href="add.html">Create a Roster</a></p>
+    </div>
+    <p class="note">(Sample) Stats updated through Week 2 of the 2026 season.</p>
+
+    <section id="fantasy-rosters">
+      <h2>Fantasy Rosters</h2>
+      <ul class="roster-list">
+        <li class="roster-card">
+          <h3><a href="detail-fantasy.html">Family League</a></h3>
+          <p class="badge">Fantasy</p>
+          <p class="meta">Week 2: 118.42 pts</p>
+        </li>
+        <li class="roster-card">
+          <h3><a href="detail-fantasy.html">Fraternity League</a></h3>
+          <p class="badge">Fantasy</p>
+          <p class="meta">Week 2: 105.28 pts</p>
+        </li>
+      </ul>
+    </section><!--Fantasy Roster List-->
+
+    <section id="nfl-teams">
+      <h2>Followed NFL Teams</h2>
+      <ul class="roster-list">
+        <li class="roster-card">
+          <h3><a href="detail-team.html">Arizona Cardinals</a></h3>
+          <p class="badge">NFL Team</p>
+          <p class="meta">Last game: L 31-7</p>
+        </li>
+        <li class="roster-card">
+          <h3><a href="detail-team.html">Minnesota Vikings</a></h3>
+          <p class="badge">NFL Team</p>
+          <p class="meta">Last game: W 9-6</p>
+        </li>
+      </ul>
+    </section><!--NFL roster list-->
+  </main>
+
+  <footer id="site-footer">
+    <p>&copy; 2026 PylonIQ. Player stats in this prototype are not official, if you make decisions based on them, you are wrong.</p>
+  </footer>
+  <!-- install the jQuery library and my script that uses it -->
+  <script src="jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

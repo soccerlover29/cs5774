@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- PylonIQ prototype: Alt design (Home page logged in) -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PylonIQ - My Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header id="site-header">
+    <a id="logo" href="dashboard.html">PylonIQ</a>
+    <nav>
+      <ul id="primary-nav">
+        <li><a href="dashboard.html" aria-current="page" class="selected">Home</a></li>
+        <li><a href="list.html">My Rosters</a></li>
+        <li><a href="add.html">Create Roster</a></li>
+      </ul>
+    </nav>
+    <p id="user-menu">
+      <span class="avatar">MT</span>
+      <a href="index.html">Log Out</a>
+    </p>
+    <form id="search-form" action="search.html" method="get">
+      <label for="search-box">Search players</label>
+      <input type="text" id="search-box" name="q" placeholder="Try &quot;Jacoby&quot;" />
+      <input type="submit" value="Search" />
+    </form><!--simulated search box that uses GET method-->
+  </header><!--nav bar and header-->
+
+  <main id="main-content">
+    <h1>Welcome Back, Micah</h1>
+    <p class="note">(Sample) Stats updated through Week 2 of the 2026 season.</p>
+
+    <div class="dashboard-grid">
+
+      <section class="panel">
+        <h2>Your NFL Teams</h2>
+        <ul class="item-list">
+          <li><a href="detail-team.html">Arizona Cardinals</a> <span class="meta">Last game: L 31-7</span></li>
+          <li><a href="detail-team.html">Minnesota Vikings</a> <span class="meta">Last game: W 9-6</span></li>
+        </ul>
+      </section><!--NFL overview-->
+
+      <section class="panel">
+        <h2>Your Fantasy Rosters</h2>
+        <ul class="item-list">
+          <li><a href="detail-fantasy.html">Family League</a> <span class="meta">Week 2: 118.42 pts</span></li>
+          <li><a href="detail-fantasy.html">Fraternity League</a> <span class="meta">Week 2: 105.28 pts</span></li>
+        </ul>
+      </section><!--Fantasy overview-->
+
+      <section class="panel">
+        <h2>Top Fantasy Players This Week</h2>
+        <p class="note">The best Week 2 performers across the whole NFL, not just your fantasy players.</p>
+        <table class="stats-table">
+          <thead>
+            <tr>
+              <th scope="col">Rank</th>
+              <th scope="col">Player</th>
+              <th scope="col">Pos</th>
+              <th scope="col" class="number">Week 2 Pts</th>
+              <th scope="col" class="number"><abbr title="Expected Points Added">EPA</abbr> per Play</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <th scope="row">Josh Allen</th>
+              <td>QB</td>
+              <td class="number">35.8</td>
+              <td class="number">0.30</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <th scope="row">Lamar Jackson</th>
+              <td>QB</td>
+              <td class="number">29.2</td>
+              <td class="number">0.12</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <th scope="row">Ja'Marr Chase</th>
+              <td>WR</td>
+              <td class="number">26.5</td>
+              <td class="number">0.24</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <th scope="row">Christian McCaffrey</th>
+              <td>RB</td>
+              <td class="number">26.4</td>
+              <td class="number">0.05</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <th scope="row">Trey McBride</th>
+              <td>TE</td>
+              <td class="number">26.0</td>
+              <td class="number">0.28</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="panel">
+        <h2>Top EPA Players This Week</h2>
+        <p class="note">The players who added the most expected points per play in Week 2.</p>
+        <table class="stats-table">
+          <thead>
+            <tr>
+              <th scope="col">Rank</th>
+              <th scope="col">Player</th>
+              <th scope="col">Pos</th>
+              <th scope="col" class="number">Week 2 Pts</th>
+              <th scope="col" class="number"><abbr title="Expected Points Added">EPA</abbr> per Play</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <th scope="row">Brock Purdy</th>
+              <td>QB</td>
+              <td class="number">24.8</td>
+              <td class="number">0.32</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <th scope="row">Mike Evans</th>
+              <td>WR</td>
+              <td class="number">18.2</td>
+              <td class="number">0.30</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <th scope="row">Josh Allen</th>
+              <td>QB</td>
+              <td class="number">35.8</td>
+              <td class="number">0.30</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <th scope="row">Derrick Henry</th>
+              <td>RB</td>
+              <td class="number">9.4</td>
+              <td class="number">0.29</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <th scope="row">Trey McBride</th>
+              <td>TE</td>
+              <td class="number">26.0</td>
+              <td class="number">0.28</td>
+            </tr>
+          </tbody>
+        </table>
+      </section><!--The 2 above sections are both stats for the user from across the league-->
+
+      <section class="panel panel-wide">
+        <h2>Trade Signals This Week</h2>
+        <ul class="signal-list">
+          <li><span class="badge">Hold</span> <strong>Josh Allen</strong> - Top 5 in both EPA and fantasy points. Keep starting him.</li>
+          <li><span class="badge">Sell High</span> <strong>Christian McCaffrey</strong> - Very high fantasy points but very low EPA, so his production may drop soon.</li>
+          <li><span class="badge">Buy Low</span> <strong>Derrick Henry</strong> - Only 9.4 points in Week 2, but his high EPA says better weeks are coming.</li>
+        </ul>
+      </section><!--Helpful concrete stats for the user-->
+
+    </div><!--Summary of all of the user's stuff-->
+  </main>
+
+  <footer id="site-footer">
+    <p>&copy; 2026 PylonIQ. Player stats in this prototype are not official, if you make decisions based on them, you are wrong.</p>
+  </footer>
+  <!-- install the jQuery library and my script that uses it -->
+  <script src="jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,312 @@
+/*  Here is the Color palette I decided on based off of the football and fall aesthetic I'm going for:
+    Dark football field green (header, footer, and headings)
+    cream (background)
+    lighter cream (content background)
+    charcoal (body text)
+    burnt orange (buttons and links)
+    cranberry (hover states)
+    harvest gold (decorative lines only, never text)
+*/
+
+/*  General stuff */
+body {
+  background-color: #ede0c7;
+  color: #222222;
+  font-family: Verdana, sans-serif;
+}
+
+h1, h2, h3 {
+  color: #1f4d2c;
+  font-family: Georgia, serif;
+}
+
+a:link, a:visited {
+  color: #222222;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #7a2e2e;
+}
+
+/* Fixing the header and nav */
+header#site-header {
+    overflow: hidden;
+    padding: 15px;
+    background-color: #1f4d2c;
+    color: #ede0c7;
+}
+
+header#site-header a:link, header#site-header a:visited {
+    color: #ede0c7;
+}
+
+ul#primary-nav li, ul#first-nav li {
+    float: left; /* Make it horizontal */
+}
+
+a#logo {
+    float: left;
+    margin-right: 30px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2em;
+    text-decoration: none; /* Take away underline */
+}
+
+ul#primary-nav, ul#first-nav {
+    list-style-type: none; /* Take away bullets */
+}
+
+ul#primary-nav li a, ul#first-nav li a {
+    padding: 8px 12px;
+    text-decoration: none;
+}
+
+ul#primary-nav li a:hover, ul#first-nav li a:hover {
+    background-color: #27713c;
+}
+
+ul#primary-nav li a.selected, ul#first-nav li a.selected {
+    border-bottom: solid #d9a441; /* lil touch of gold */
+}
+
+header#site-header a.button, p#user-menu {
+    float: right;
+}
+
+/* Login and Create roster button */
+a.button, input[type=submit], input[type=reset] {
+    background-color: #9e4218;
+    padding: 10px 20px;
+    border-radius: 5px; /* round the corners out */
+    color: #ede0c7;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a.button:hover, input[type=submit]:hover, input[type=reset]:hover {
+    background-color: #7a2e2e;
+}
+
+/* Delete roster button */
+details.confirm-delete summary {
+    display: inline-block;
+    padding: 10px 20px;
+    border: solid #7a2e2e;
+    border-radius: 5px;
+    color: #7a2e2e;
+    font-weight: bold;
+}
+/* invert colors on hover*/
+details.confirm-delete summary:hover {
+    background-color: #7a2e2e;
+    color: #ede0c7;
+}
+
+/* Improve the layout Give some margin */
+main#main-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Fix images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* home page photo */
+img.intro-image {
+    float: right;
+    width: 45%;
+    margin: 0 0 20px 20px; /* had to mess with these a lot */
+}
+
+/* For the fitz image */
+img.overview-image {
+    float: right;
+    width: 25%;
+}
+
+/* get rid of the Skip to main content link, but the hope is that it is the first thing tabbers hit and then they can skip down*/
+a.skip-link {
+    position: absolute;
+    left: -9999px;
+}
+
+/*  Add a nice little box around EPA with an orange border */
+section#what-is-epa {
+    padding: 25px;
+    border-left: 6px solid #9e4218;
+    background-color: #f7f0e3;
+}
+
+/*  Make all the ranking boxes look better */
+section.panel {
+    box-sizing: border-box; /* so they all stay in line */
+    padding: 15px;
+    border: 1px solid #b8a47e;
+    border-radius: 5px;
+    background-color: #f7f0e3;
+}
+
+div.rankings-grid {
+    overflow: hidden; /* the copywright mark was on the right */
+}
+
+/*  For the unlogged in homepage ranking boxes */
+div.rankings-grid section.panel { 
+    float: left;
+    width: 23%;
+    margin: 5px;
+}
+
+/* Make the lists on the unlogged in home screen fit better */
+/*  Make the stats different from the titles */
+p.ranked-by {
+    font-size: 1em;
+    color: #6b5a3e;
+}
+
+ol.ranked-list {
+    margin: 0;
+    padding-left: 20px;
+}
+/* let the items breathe */
+ol.ranked-list li {
+    margin-bottom: 8px;
+}
+
+/* Seperate the stats from the titles */
+ol.ranked-list span.stat {
+    display: block; /* put it on it's own line */
+    font-size: 0.75em;
+    color: #6b5a3e;
+}
+
+/* Make tables look like tables */
+table.stats-table th, table.stats-table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid #b8a47e;
+    text-align: left;
+}
+
+/* Make the headers green */
+table.stats-table thead th {
+    background-color: #1f4d2c;
+    color: #ede0c7;
+    font-size: 1em;
+}
+
+/* Phones and small tablets (under 768px wide) */
+@media screen and (max-width: 767px) {
+  img.intro-image, img.overview-image {
+      float: none;
+      width: 100%;
+      max-width: 100%;
+      margin: 0 0 20px 0;
+  } /* Fix images on phones */
+
+  div.rankings-grid section.panel {
+      float: none;
+      width: 100%;
+      margin: 0 0 20px 0;
+  } /* Fix rankings on phones */
+
+  table.stats-table th, table.stats-table td {
+      padding: 6px 4px;
+      font-size: 0.85em;
+  }/* Fix tables on phones */
+}
+
+/* Add a "clear" rule */
+section#league-leaders {
+    clear: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* NEW FROM PROJECT 3 */
+
+/* Search box pushed to the right */
+form#search-form {
+    float: right;
+    margin: 10px;
+}
+
+/* And make it smaller */
+form#search-form input[type=text] {
+    width: 150px;
+}
+
+@media screen and (max-width: 767px) {
+    /* Make it work on phones too by putting it on its own line under the nav */
+    form#search-form {
+        float: none;
+        clear: both;
+        margin: 0;
+        padding-top: 10px;
+    }
+
+    /* No photo beside the table so it fits */
+    section.roster-players table.stats-table {
+        width: 100%;
+    }
+
+    /* If the table gets too wide, only the table scrolls sideways */
+    section.roster-players {
+        overflow-x: auto;
+        margin-right: -20px; /* let the table use the margin */
+    }
+
+    /* Smaller note box for phones */
+    form.note-form input[type=text] {
+        width: 95px;
+    }
+}
+
+/* Copied the What is EPA for this */
+div.no-results {
+    padding: 25px;
+    border-left: 6px solid #7a2e2e;
+    background-color: #f7f0e3;
+}
+
+
+/* Give the player table a set width so it doesn't jump */
+section.roster-players table.stats-table {
+    width: 72%;
+}
+
+/* Highlight the row that is hovered over */
+section.roster-players tbody tr:hover {
+    background-color: #f7f0e3;
+}
+
+/* Change the clicked row color */
+section.roster-players tbody tr.selected-row {
+    background-color: #f3dfae;
+}
+
+/* The new "Why this signal?" row */
+section.roster-players tbody tr.reason-row td {
+    border-left: 6px solid #d9a441;
+    background-color: #f7f0e3;
+}
+
+/* Style the note better */
+p.player-note {
+    font-size: 0.75em;
+    font-style: italic;
+    font-weight: normal;
+    color: #6b5a3e;
+}

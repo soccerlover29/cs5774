@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- PylonIQ prototype: Home page (logged out) -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PylonIQ - Home</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+  <!--added for accessibility like screen readers and keyboard readers-->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header id="site-header">
+    <a id="logo" href="index.html">PylonIQ</a>
+    <nav>
+      <ul id="first-nav">
+        <li><a href="index.html" aria-current="page" class="selected">Home</a></li>
+        <li><a href="#what-is-epa">What Is EPA?</a></li>
+      </ul>
+    </nav>
+    <a class="button" href="dashboard.html">Log In</a>
+    <form id="search-form" action="search.html" method="get">
+      <label for="search-box">Search players</label>
+      <input type="text" id="search-box" name="q" placeholder="Try &quot;Jacoby&quot;" />
+      <input type="submit" value="Search" />
+    </form><!--simulated search box that uses GET method-->
+  </header><!--site header with a baby nav-->
+
+  <main id="main-content">
+
+    <section class="intro">
+
+      <!-- Image came from flickr creative commons: https://www.flickr.com/photos/tobinsj/2997194196/in/photolist-5yRpq1-x19kth-5N1tsd-yNRc2b-9evGoX-23B71x6-23cyJWH-4tedUJ-28xxvn4-e69TMm-AuEnaE-fUixB4-jVmDGz-e69Mnu-6WKhe5-23B71U8-Q83DiL-5MWbXa-CMbWBz-e64dSe-23B71HB-hDf5ft-4tedgW-c1bsYY-8FNSSi-8AoB33-5N1vCG-5MWbmP-dxYMBS-iuYL5G-uk6bPN-eJBgVT-hkKapN-xXMMy-6sAQ9E-28GLTZY-239APwx-fKjtTa-e69YSU-dU2Nuv-oG5TD-9i32Fs-e64aZr-9sknnK-37W9rt-ewFZba-2odBQj-fUixfc-6zbvm3-nRVckn -->
+      <img class="intro-image" src="images/Pylon.jpg" alt="Leonard Weaver scores a touchdown next to a pylon" />
+      <h1>Welcome to PylonIQ</h1>
+      <p class="lead">PylonIQ helps fantasy football managers decide who to start, sit, or trade by comparing a player's fantasy points to their <abbr title="Expected Points Added">EPA</abbr>. A player with a ton of fantasy points but a low EPA could be a fraud who is just getting lucky, so cash in on our advanced analytics to make better decisions, picks, and trades.</p>
+      <p><a class="button button-large" href="dashboard.html">Log In to Track Your Rosters</a></p>
+    </section><!--intro paragraph-->
+
+    <section id="what-is-epa">
+      <h2>What Is EPA?</h2>
+      <p><abbr title="Expected Points Added">EPA</abbr> (Expected Points Added) measures how much a single play changed a team's chances of scoring. For example, a 20-yard catch on 3rd and 15 adds a lot of expected points, while a 2-yard run on 3rd and 10 takes some away. Average EPA per play is therefore a good measure of how much a player shows up when his team needs him most, even in a week when he doesn't necessarily have a ton of yards or score a touchdown. Fantasy points can jump up or down because of one lucky touchdown, but EPA is a better measure of a player's importance to his <abbr title="Offensive Coordinator">OC</abbr>'s scheme, and is a good way to guess who will keep producing and who is due to cool off.</p>
+    </section><!--Explain EPA-->
+
+    <section id="league-leaders">
+      <h2>League Leaders</h2>
+      <p class="note">(Sample) Stats through Week 2 of the 2026 season. Pts = average fantasy points per game (in a PPR league).</p>
+
+      <div class="rankings-grid">
+        <section class="panel">
+          <h3>Top Offenses</h3>
+          <p class="ranked-by">Ranked by EPA per play</p>
+          <ol class="ranked-list">
+            <li><span class="name">San Francisco 49ers</span> <span class="stat">0.21 EPA per play</span></li>
+            <li><span class="name">Baltimore Ravens</span> <span class="stat">0.18 EPA per play</span></li>
+            <li><span class="name">New York Giants</span> <span class="stat">0.15 EPA per play</span></li>
+            <li><span class="name">Buffalo Bills</span> <span class="stat">0.14 EPA per play</span></li>
+            <li><span class="name">Dallas Cowboys</span> <span class="stat">0.12 EPA per play</span></li>
+          </ol>
+        </section>
+
+        <section class="panel">
+          <h3>Top Offensive Players</h3>
+          <p class="ranked-by">Ranked by EPA per play</p>
+          <ol class="ranked-list">
+            <li><span class="name">Dontayvion Wicks</span> <span class="stat">28.4 pts, 0.41 EPA</span></li>
+            <li><span class="name">Isaiah Likely</span> <span class="stat">17.3 pts, 0.35 EPA</span></li>
+            <li><span class="name">Mike Evans</span> <span class="stat">24.7 pts, 0.30 EPA</span></li>
+            <li><span class="name">Ladd McConkey</span> <span class="stat">20.4 pts, 0.27 EPA</span></li>
+            <li><span class="name">Jaxon Smith-Njigba</span> <span class="stat">22.6 pts, 0.25 EPA</span></li>
+          </ol>
+        </section>
+
+        <section class="panel">
+          <h3>Top Defenses</h3>
+          <p class="ranked-by">Ranked by EPA allowed per play (lower is better)</p>
+          <ol class="ranked-list">
+            <li><span class="name">Las Vegas Raiders</span> <span class="stat">-0.19 EPA allowed</span></li>
+            <li><span class="name">Cincinnati Bengals</span> <span class="stat">-0.15 EPA allowed</span></li>
+            <li><span class="name">Seattle Seahawks</span> <span class="stat">-0.13 EPA allowed</span></li>
+            <li><span class="name">Jacksonville Jaguars</span> <span class="stat">-0.11 EPA allowed</span></li>
+            <li><span class="name">Minnesota Vikings</span> <span class="stat">-0.10 EPA allowed</span></li>
+          </ol>
+        </section>
+
+        <section class="panel">
+          <h3>Top Defensive Players</h3>
+          <p class="ranked-by">Ranked by defensive fantasy points per game</p>
+          <ol class="ranked-list">
+            <li><span class="name">Devin Lloyd</span> <span class="stat">19.5 pts</span></li>
+            <li><span class="name">T.J. Watt</span> <span class="stat">18.0 pts</span></li>
+            <li><span class="name">Josiah Trotter</span> <span class="stat">17.5 pts</span></li>
+            <li><span class="name">Greg Rousseau</span> <span class="stat">15.0 pts</span></li>
+            <li><span class="name">Byron Murphy</span> <span class="stat">14.5 pts</span></li>
+          </ol>
+        </section>
+      </div>
+    </section><!--All the top Players and Units in the NFL-->
+
+    <section id="top-by-position">
+      <h2>Top Players by Position</h2>
+      <p class="note">Ranked by fantasy points per game through Week 2 of the 2026 season.</p>
+
+      <div class="rankings-grid">
+        <section class="panel">
+          <h3>Quarterbacks</h3>
+          <p class="ranked-by">Ranked by fantasy points per game</p>
+          <ol class="ranked-list">
+            <li><span class="name">Lamar Jackson</span> <span class="stat">30.2 pts, 0.20 EPA</span></li>
+            <li><span class="name">Brock Purdy</span> <span class="stat">28.5 pts, 0.32 EPA</span></li>
+            <li><span class="name">Josh Allen</span> <span class="stat">27.9 pts, 0.30 EPA</span></li>
+            <li><span class="name">Dak Prescott</span> <span class="stat">24.4 pts, 0.19 EPA</span></li>
+            <li><span class="name">Jared Goff</span> <span class="stat">23.8 pts, 0.22 EPA</span></li>
+          </ol>
+        </section>
+
+        <section class="panel">
+          <h3>Running Backs</h3>
+          <p class="ranked-by">Ranked by fantasy points per game</p>
+          <ol class="ranked-list">
+            <li><span class="name">Kenneth Walker III</span> <span class="stat">24.0 pts, 0.18 EPA</span></li>
+            <li><span class="name">Jahmyr Gibbs</span> <span class="stat">23.5 pts, 0.16 EPA</span></li>
+            <li><span class="name">Chuba Hubbard</span> <span class="stat">21.2 pts, 0.10 EPA</span></li>
+            <li><span class="name">Christian McCaffrey</span> <span class="stat">20.9 pts, 0.05 EPA</span></li>
+            <li><span class="name">Derrick Henry</span> <span class="stat">18.6 pts, 0.29 EPA</span></li>
+          </ol>
+        </section>
+
+        <section class="panel">
+          <h3>Wide Receivers</h3>
+          <p class="ranked-by">Ranked by fantasy points per game</p>
+          <ol class="ranked-list">
+            <li><span class="name">Dontayvion Wicks</span> <span class="stat">28.4 pts, 0.41 EPA</span></li>
+            <li><span class="name">Mike Evans</span> <span class="stat">24.7 pts, 0.30 EPA</span></li>
+            <li><span class="name">Amon-Ra St. Brown</span> <span class="stat">23.9 pts, 0.26 EPA</span></li>
+            <li><span class="name">Denzel Boston</span> <span class="stat">22.8 pts, 0.21 EPA</span></li>
+            <li><span class="name">Jaxon Smith-Njigba</span> <span class="stat">22.6 pts, 0.25 EPA</span></li>
+          </ol>
+        </section>
+
+        <section class="panel">
+          <h3>Tight Ends</h3>
+          <p class="ranked-by">Ranked by fantasy points per game</p>
+          <ol class="ranked-list">
+            <li><span class="name">Trey McBride</span> <span class="stat">19.8 pts, 0.24 EPA</span></li>
+            <li><span class="name">Isaiah Likely</span> <span class="stat">17.3 pts, 0.35 EPA</span></li>
+            <li><span class="name">Dalton Kincaid</span> <span class="stat">15.1 pts, 0.18 EPA</span></li>
+            <li><span class="name">Mark Andrews</span> <span class="stat">14.6 pts, 0.15 EPA</span></li>
+            <li><span class="name">Travis Kelce</span> <span class="stat">13.9 pts, 0.12 EPA</span></li>
+          </ol>
+        </section>
+      </div>
+    </section><!--Top players at each offensive position-->
+
+  </main>
+
+  <footer id="site-footer">
+    <p>&copy; 2026 PylonIQ. Player stats in this prototype are not official, if you make decisions based on them, you are wrong.</p>
+  </footer>
+  <!-- install the jQuery library and my script that uses it -->
+  <script src="jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
