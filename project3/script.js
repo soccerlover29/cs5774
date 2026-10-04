@@ -121,14 +121,21 @@ function setUpSignalReasons() {
     playerTableBody.on("click", "tr:not(.reason-row)", function (event) {
         let clickedRow = $(this);
 
-        /* If the clicked row has the reason, close it */
-        if (clickedRow.hasClass("selected-row")) {
-            closeSignalReason(clickedRow.parent());
+        /* Clicks inside the note form are for the note, not the row */
+        if ($(event.target).closest("form.note-form").length > 0) {
             return;
         }
 
-        /* Close any open explanation rows */
-        closeSignalReason(clickedRow.parent());
+        /* event.detail is 2 on the second click of double-clicking, so skip it to avoid opening and then closing which messes up the page*/
+        if (event.detail > 1) {
+            return;
+        }
+
+        /* If the clicked row has the reason, close it */
+        if (clickedRow.hasClass("selected-row")) {
+            closeSignalReason(clickedRow);
+            return;
+        }
 
         /* Extract the player's name, points, EPA, and trade signal */
         let playerName = clickedRow.children("th").contents().first().text();
@@ -150,10 +157,10 @@ function setUpSignalReasons() {
     });
 }
 
-/*  Closes an explanation by taking the selected tag and getting rid of the reason row */
-function closeSignalReason(tableBody) {
-    tableBody.children("tr.selected-row").removeClass("selected-row");
-    tableBody.children("tr.reason-row").remove();
+/*  Closes one row's explanation by taking away the tag and getting rid of the reason row */
+function closeSignalReason(playerRow) {
+    playerRow.removeClass("selected-row");
+    playerRow.next("tr.reason-row").remove();
 }
 
 /*  Explains the signal with real numbers */
