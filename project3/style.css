@@ -310,3 +310,8 @@ p.player-note {
     font-weight: normal;
     color: #6b5a3e;
 }
+
+/* Make the boxes with notes look different */
+section.roster-players tbody th.has-note {
+    border-left: 6px solid #9e4218;
+}
